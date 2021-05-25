@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title> Family book (project-78)</title>
+    </head>
+
+    <body background="https://wallpapercave.com/wp/999EGMq.jpg">
+        <section>
+          
+          <h1>My family</h1>
+
+          <hr>
+          
+          <p id="instructions">Click next to show the members of my family</p>
+            
+                <div>
+                    <h2 id="Title" >My Family Book</h1>
+                       <hr>
+                    <img src="https://i.pinimg.com/originals/27/72/ed/2772edd652c534c175f3386e30034a62.jpg" id="Images_of_family_members_in_my_family">
+                    <hr>
+                    <h4 style="font-size: 25px;" id="names_of_Family_members_in_my_family">My family</h4>
+                    
+                    <button type="button" onclick="update()">Next</button>
+                 </div>
+            
+          
+
+        </section>
+
+        <section>
+
+          <p id="about-family">I love my family. My family consists of 7 people,
+               I, My mother, My father, My grandmother and grandfather on mother's side and my grandmother and grandfather on my father's side.
+              My mother and father are engineers. We all live in Kerala,india.
+               It is my family that makes be happy. My grandmother and grandfather plays with me . They are like my friends. My mother teaches and takes the first place in my favorite's list.
+              My father also plays with me. When my father is there I will stick to him 
+              like glue! All my family members love me very much.
+          </p>
+ 
+        </section>
+<hr>
+        <section>
+            <h1>Contact</h1>
+             <hr>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4016734.7889224268!2d73.88341635519626!3d10.532721427019517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0812ffd49cf55b%3A0x64bd90fbed387c99!2sKerala!5e0!3m2!1sen!2sin!4v1621921201452!5m2!1sen!2sin" width = "100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <style>
+            body{                
+                text-align: center;
+            }
+            
+            h1{
+                font-weight: bold;
+               color: red;
+               font-size: 50px;
+            }
+            #instructions{
+                font-style: italic;
+                font-family: Georgia, 'Times New Roman', Times, serif;                
+            }
+            div{
+                background-color: pink;
+                padding-top: 10px;
+                padding-bottom: 40px;
+               height:500px;
+               margin-top: 50px;
+               margin-bottom: 50px;
+                max-width: 400px;
+                border-bottom-right-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 75px;
+                border-top-left-radius: 75px;
+                margin-left: 400px;
+                
+            
+            }
+            #Title{
+                
+                font-weight: 600;
+                color: blue;
+            }
+            #Images_of_family_members_in_my_family{
+                height: 300px;
+                width: 250px;
+                border-radius: 80px;
+                border-width: 5px;
+                border-color: cornsilk;
+                
+            }
+            button{
+                background-color: purple;
+                color: yellow;
+            }
+            #about-family{
+                font-weight: bold;
+                color: black;
+            }
+
+        </style>
+
+        <script>
+
+           var images = ["https://i.pinimg.com/originals/27/72/ed/2772edd652c534c175f3386e30034a62.jpg" , 
+           "https://i.pinimg.com/originals/3a/74/5d/3a745d3dcba72feb73e44e399ec97bea.jpg" , 
+           "https://images.all-free-download.com/images/graphicthumb/happy_mother_cradling_baby_6821700.jpg" , 
+           "http://www.abcnutritionservices.com/wp-content/uploads/2012/04/father-and-daughter-picture.jpg" , 
+           "https://thumbs.dreamstime.com/b/lovely-grandmother-child-girl-cooking-kitchen-okay-gesture-grandmother-little-granddaughter-making-food-together-208436741.jpg" ,
+           "https://t4.ftcdn.net/jpg/02/30/15/71/360_F_230157172_A5CLDyafSouhYCsVPoLiWtnXUxkZPXnQ.jpg" ,
+           "https://image.shutterstock.com/image-vector/indian-fat-old-happy-grandmother-260nw-1233826615.jpg" , 
+            "https://cdn2.vectorstock.com/i/1000x1000/02/11/face-expression-grandfather-smiling-vector-26010211.jpg"];
+
+            var names = ["My Family" , 
+            "Joann Jacob Franklin (me)" ,
+            "Veena K John" ,
+            "Jacob Franklin", 
+            "Jeffy Rita  (My grandmother on mother's side", 
+            "K. K. John (My grandfather on mother's side)" , 
+            "V L. Charlotte (My grandmother on father's side)" , 
+            "Franklin Mascarene (My grandfather on father's side)"];
+
+            
+            var i = 0;
+            
+            function update() {
+              i++;
+              var number_of_family_members_in_array = 7
+
+              if (i>number_of_family_members_in_array) {
+                i = 0;   
+              }                  
+              
+
+              var updated_image = images[i];
+              var updated_name = names[i]
+              document.getElementById("Images_of_family_members_in_my_family").src = updated_image;
+              document.getElementById("names_of_Family_members_in_my_family").innerHTML = updated_name;
+
+            }
+  
+        </script>
+      
+    </body>
+
+</html>
